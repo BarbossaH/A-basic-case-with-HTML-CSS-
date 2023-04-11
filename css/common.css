@@ -1,0 +1,335 @@
+/* 模块化 */
+/* 哪些共同的部分就可以使用模块化模式开发 */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?1u2632');
+  src:  url('../fonts/icomoon.eot?1u2632#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?1u2632') format('truetype'),
+    url('../fonts/icomoon.woff?1u2632') format('woff'),
+    url('../fonts/icomoon.svg?1u2632#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+/* 版心宽度，制作任何网页都需要第一步就应该确定版心的规格 */
+.w {
+  width: 1200px;
+  margin:0 auto;
+}
+/* 快捷导航栏 */
+.shortcut {
+  height: 31px;
+  line-height: 31px;
+  background-color: #f1f1f1;
+}
+
+.fl {
+  float: left;
+  font-weight: 700;
+}
+
+.shortcut ul li {
+  float: left;
+}
+
+.style_red {
+  color: #c81623;
+}
+
+.fr {
+  float: right;
+}
+/* 这里我忘了在shortcut和fr之间打空格，就导致效果出不来 */
+.shortcut .fr ul li:nth-child(even) {
+  background-color: #666666;
+  height: 12px;
+  width: 1px;
+  margin: 10px 15px 0px;
+}
+
+.arrow-icon::after {
+  margin-left: 3px;
+  content: '\ea51';
+  font-family: 'icomoon';
+}
+
+.header {
+  position: relative;
+  height: 105px;
+  /* background-color: pink; */
+}
+
+.logo {
+  position: absolute;
+  top: 25px;
+  width: 171px;
+  height: 61px;
+  /* 不能使用margin，因为会出现塌陷问题 所以用定位去做*/
+  /* margin: 10px 15px; */
+  /* background-color: seashell; */
+}
+
+.logo a {
+  /* a是行内元素，为了全部显示图片就要转化成块内元素，我想这是以后经常碰到的情形 */
+  display: block;
+  width: 171px;
+  height: 61px;
+  /* 两种不同的方式隐藏文字，我个人更喜欢设置文字尺寸 */
+  /* font-size: 0px; */
+  text-indent: -120px;
+  overflow: hidden;
+  background: url(../images/logo.png) no-repeat ;
+}
+.search {
+  position: absolute;
+  left:346px;
+  top: 25px;
+  width: 538px;
+  height: 36px;
+  border: 2px solid #b1191a;
+}
+
+.search input {
+  float: left;
+  width: 454px;
+  height: 32px;
+  /* text-indent: 1em; */
+  padding-left: 10px;
+}
+.search button {
+  float: left;
+  width: 80px;
+  height: 32px;
+  background-color: #b1191a;
+  color: white;
+  font-size: 16px;
+  /* 没啥用 */
+  /* font-weight: bold; */
+}
+
+.hotwords {
+  position: absolute;
+  top:66px;
+  left:346px;
+}
+
+.hotwords a {
+  /* 这是利用a元素之间的距离来布局，不是用文字。这是制作经验和思路 */
+  /* 行内元素左右的margin值是没有问题的，上下就会塌陷 */
+  margin: 10px;
+}
+
+.shopcar {
+  position: absolute;
+  right: 60px;
+  top: 25px;
+  width: 140px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 12px;
+  text-align: center;
+  border: solid 1px #dfdfdf;
+  background-color: #f7f7f7;
+}
+/* 重新下载了新的字符图标，就要重新复制icomoom的css的布局 */
+.shopcar::before {
+  position: absolute;
+  top: 1px;
+  left: 24px;
+  content: '\e905';
+  font-family: 'icomoon';
+  color: #b1191a;
+  /* margin-right: 6px; */
+}
+
+.shopcar::after {
+  position: absolute;
+  content: "\e9b0";
+  font-family: 'icomoon';
+  margin-left: 10px;
+}
+
+.count {
+  position: absolute;
+  top: -5px;
+  /* 用左边对其如果增加数量位数时，会往右扩展 */
+  left:105px;
+  /* right: 20px; */
+  /* 看看这个奇葩的设计 */
+  border-radius: 7px 7px 7px 0px;
+  height: 14px;
+  /* 注意：因为count继承了父类shopcar，所以也就继承了父类的属性，父类的line-height是35px
+  所以这里的line-height就要重新写
+  但凡发现字偏离的位置，就要先注意可能是行高的问题 */
+  line-height: 14px;
+  padding: 0px 5px;
+  color: #fff;
+  background-color: #e60012;
+}
+
+.nav {
+  height: 47px;
+  border-bottom: 2px solid #b1191a;
+}
+
+.nav .dropdown {
+  float: left;
+  width: 210px;
+  height: 45px;
+  background-color: #b1191a;
+}
+.dropdown .dt {
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  line-height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dropdown .dd {
+  margin-top: 2px;
+  height: 465px;
+  width: 210px;
+  background-color: #c81623;
+  /* display: none; */
+}
+
+.dropdown .dd li {
+  position: relative;
+  height: 31px;
+  line-height: 31px;
+  margin-left: 2px;
+  padding-left: 10px;
+  /* background-color: yellow; */
+}
+
+.dropdown .dd li::after {
+  position: absolute;
+  right: 6px;
+  content: '\ea3c';
+  font-family: "icomoon";
+  color: #f1f1f1;
+}
+
+.dropdown .dd li:hover{
+  background-color: #fff;
+}
+/* 这地方有点绕，稍微思考一下 */
+.dropdown .dd li:hover a {
+  color: #c81623;
+}
+
+.dropdown .dd li a {
+  /* padding-left: 4px; */
+  font-size: 14px;
+  color: #fff;
+}
+.nav .navitems {
+  float: left;
+  height: 45px;
+}
+
+.nav .navitems ul li {
+  float: left;
+}
+
+.nav .navitems ul li a{
+  /* 为什么要设置为块元素，因为块元素可以设置高度，a是行内元素，所以设置成块内元素可以设置高度
+  设置高度的目的就是为了方便点击 */
+  display: block;
+  font-size: 16px;
+  height: 45px;
+  line-height: 45px;
+  /* margin: 25px 0; */
+  /* margin: 0 25px; */
+  /* 设置padding而不是margin的道理也是为了方便点击 */
+  padding: 0 25px;
+}
+
+.footer {
+  height: 415px;
+  /* background-color: rebeccapurple; */
+  padding-top: 30px;
+  /* background-color: #f5f5f5; */
+}
+
+.service_model {
+  height: 80px;
+  border-bottom: 1px solid #ccc;
+}
+
+.service_model ul li {
+  float: left;
+  width: 300px;
+  height: 50px;
+  /* background-color: red; */
+  padding-left: 35px;
+}
+
+.service_model ul li h5 {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 6px;
+  /* background-color: pink; */
+  
+}
+.service_model ul li .genuious {
+  background: url(../images/icons.png) no-repeat -252px -2px;
+}
+
+.service_model ul li .dilevery {
+  background: url(../images/icons.png) no-repeat -254px -54px;
+}
+
+.service_model ul li .aftersell {
+  background: url(../images/icons.png) no-repeat -257px -106px;
+}
+
+.service_model ul li .special {
+  background: url(../images/icons.png) no-repeat -258px -156px;
+}
+
+
+.service_text h4 {
+  font-size: 14px;
+}
+
+.service_text p {
+  font-size: 12px;
+}
+
+.help_model {
+  height: 185px;
+  border-bottom: 1px solid #ccc;
+  padding-left: 50px;
+  padding-top: 20px;
+}
+
+.help_model dl {
+  float: left;
+  width: 200px;
+}
+
+.help_model dl:last-child {
+  width: 90px;
+  text-align: center;
+}
+.help_model dl dt{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.copy_right {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.copy_right .links {
+  margin-bottom: 15px;
+}

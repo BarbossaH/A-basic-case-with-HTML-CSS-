@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 网站TDK三大图标SEO优化 -->
+  <!-- SEO(Search Engine Optimization)搜索引擎优化，是一种利用搜索引擎的规则提高网站有关的搜索引擎内自然排名的方式 -->
+  <!-- SEO的目的是对网站进行深度的优化，从而帮助网站获取免费的流量，进而在搜索引擎上提升网站的排名，提升网站的知名度 -->
+
+  <!-- title具有不可替代性，是我们内页的第一个重要标签，是搜索引擎了解网页的入口和对网页主题归属的最佳判断点。 -->
+  <!-- 建议：网站名（产品名）-网站名称（尽量不要超过30个汉字）
+  京东（JD.COM）综合网购首选-正品低价，品质保障，配送及时，轻松购物！
+  小米商城-小米5s，红米Note4，小米MIX，小米笔记本官方网站 -->
+  <title>品优购-综合网购首选-正品低价，品质保障，配送及时，轻松购物！</title>
+
+  <!-- 2Description网站说明
+  简要说明我们网站主要是做什么的。-->
+  <meta name="description"
+    content="京东JD.com-专业的综合网上购物商城，销售家电，数码通讯，电脑，家居百货，服装服饰，母婴，图书，食品等数万个品牌优质商品，便捷诚信的服务，为你提供愉悦的网上购物体验！" />
+
+  <!-- Keywords关键字 -->
+  <!-- keywords是页面关键字，是搜索引擎的关注点之一 -->
+  <!-- keywords最好为6-8个关键词，关键词用英文逗号隔开，采用关键词1,关键词2的形式。 -->
+  <!-- 关键词越靠前，权重越高，越容易搜索到 -->
+  <meta name="keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东" />
+
+  <!-- favicon图标 (如果利用模拟服务器的插件就不能成功)-->
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <!-- 引入初始化样式文件 -->
+  <link rel="stylesheet" href="css/base.css">
+  <!-- 引入我们公共的样式文件 -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- 引入index的样式文件 -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <!-- 快捷导航 -->
+  <section class="shortcut">
+    <!-- 放置版心 -->
+    <div class="w">
+      <div class="fl">
+        <ul>
+          <li>Welcome:&nbsp;&nbsp;</li>
+          <li><a href="#">Sign in</a>&nbsp;&nbsp;&nbsp;<a href="#" class="style_red ">Sign up</a></li>
+        </ul>
+      </div>
+      <div class="fr">
+        <ul>
+          <li>My order</li>
+          <li></li>
+          <li class="arrow-icon">My shopping</li>
+          <li></li>
+          <li>Member</li>
+          <li></li>
+          <li>Enterprise</li>
+          <li></li>
+          <li class="arrow-icon">Follow us</li>
+          <li></li>
+          <li class="arrow-icon">Server</li>
+          <li></li>
+          <li class="arrow-icon">Navigation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- 头部模块制作开始 我这里犯了一个错误，把头部模块放到了快捷导航模块了-->
+  <header class="header w">
+    <!-- 这是SEO的logo -->
+    <!-- 1、重要：实际开发中logo制作，一定要放一个h1标签，目的就是为了增加搜索权重 -->
+    <!-- 2、h1里面要放一个链接，返回首页
+    3、为了搜索引擎收录我们，我们链接里面要放一个文字（网站名称），但是文字不要显示出来
+        方法1:text-indent, 把文字移到盒子外面，然后隐藏overflow:hidden,淘宝的做法
+        方法2:直接font-size:0,京东的做法。
+    4、最好给链接一个title属性，这样书包移到logo就可以看到上面的提示文字了。 -->
+
+    <div class="logo">
+      <!-- 按照上面的规则，先放一个h1标签，然后在放一个链接 -->
+      <h1>
+        <a href="index.html" title="Shopping">Shopping</a>
+      </h1>
+    </div>
+    <!-- 搜索模块开始 -->
+    <div class="search">
+      <input type="search" name="" id="" placeholder="Please input your words" autofocus="autofocus">
+      <button>Search</button>
+    </div>
+    <!-- 搜索模块结束 -->
+    <!-- 热词模块 视频是要去用a元素做-->
+    <div class="hotwords">
+      <a href="#" class="style_red">优惠购首发</a>
+      <a href="#">亿元优惠</a>
+      <a href="#">9.9元团购</a>
+      <a href="#">美满99减30</a>
+      <a href="#">办公用品</a>
+      <a href="#">电脑</a>
+      <a href="#">通信</a>
+      <!-- <a href="#"></a> -->
+    </div>
+    <!-- 热词模块end -->
+    <!-- 购物车模块 -->
+    <div class="shopcar">我的购物车
+      <!-- 计数模块 -->
+      <!-- 这里得用绝对定位，不然就会改变上面文字的位置 -->
+      <i class="count">88888</i>
+      <!-- 计数模块end -->
+    </div>
+    <!-- 购物车模块结束 -->
+    <!-- 计数模块 -->
+  </header>
+  <!-- 头部模块制作结束 -->
+
+  <!-- 导航栏制作 -->
+  <!-- 思路分析： -->
+  <!-- 先给一个通栏的大盒子，显示一条线；然后再有一个版心的盒子，里面放两个盒子左右浮动 -->
+  <nav class="nav">
+    <div class="w">
+      <!-- 主要这种下拉式的盒子 -->
+      <div class="dropdown">
+        <div class="dt">全部商品分类</div>
+        <div class="dd">
+          <ul>
+            <li><a href="#">家用电器</a></li>
+            <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+            <li><a href="#">电脑、办公</a></li>
+            <li><a href="#">男装、女装、童装、内衣</a></li>
+            <li><a href="#">护肤化妆、清洁用品、宠物</a></li>
+            <li><a href="#">鞋靴、箱包、珠宝、奢侈品</a></li>
+            <li><a href="#">运动户外、钟表</a></li>
+            <li><a href="#">汽车、汽车用品</a></li>
+            <li><a href="#">母婴、玩具乐器</a></li>
+            <li><a href="#">食品、酒类、生鲜、特产</a></li>
+            <li><a href="#">医药保健</a></li>
+            <li><a href="#">图书、音像、电子书</a></li>
+            <li><a href="#">彩票、旅行、充值、票务</a></li>
+            <li><a href="#">理财、众筹、白条、保险</a></li>
+            <li><a href="#">家居、家具、家装、厨具</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- 导航链接 -->
+
+      <div class="navitems">
+        <ul>
+          <li><a href="#">服装城</a></li>
+          <li><a href="#">美容馆</a></li>
+          <li><a href="#">智能超市</a></li>
+          <li><a href="#">全球购</a></li>
+          <li><a href="#">闪购</a></li>
+          <li><a href="#">团购</a></li>
+          <li><a href="#">拍卖</a></li>
+          <li><a href="#">石油</a></li>
+        </ul>
+      </div>
+
+      <!-- 导航链接end -->
+    </div>
+  </nav>
+  <!-- 导航栏制作end -->
+
+  <!-- 首页专有模块 -->
+  <div class="w">
+    <div class="main">
+      <div class="focus">
+        <!-- 这里要注意两点：第一结构不能直接放入图片，我猜测结构一般用于父窗口，方便以后修改，因为修改子窗口的内容不会影响父窗口。如果要设置img就要使用别的控件去控制它比如 li 控件。看下面的例子。
+        第二，background 和img 都可以设置图片。我发现background可以调整位置，使用精灵图，而img就是背景，目前看就是这样。 -->
+        <ul>
+          <li>
+            <img src="upload/bargain.jpg" alt="">
+          </li>
+        </ul>
+      </div>
+      <div class="newsflesh">
+        <div class="news">
+          <!-- 根据网页布局，选择合适的控件 -->
+          <div class="new_hd">
+            <h5>品优购快报</h5>
+            <a href="#">更多</a>
+          </div>
+          <div class="new_bd">
+            <ul>
+              <li><a href="#"><strong>[New]</strong> Good news is icoming,are you waiting for this?</a></li>
+              <li><a href="#"><strong>[New]</strong> Good news is icoming</a></li>
+              <li><a href="#"><strong>[New]</strong> Good news is icoming</a></li>
+              <li><a href="#"><strong>[New]</strong> Good news is icoming</a></li>
+              <li><a href="#"><strong>[New]</strong> Good news is icoming</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="lifeservice">
+          <ul>
+            <li>
+              <i></i>
+              <p>话费</p>
+            </li>
+            <li>
+              <i></i>
+              <p>话费</p>
+            </li>
+            <li>
+              <i></i>
+              <p>话费</p>
+            </li>
+            <li>
+              <i></i>
+              <p>话费</p>
+            </li>
+            <li>
+              <i></i>
+              <p>话费</p>
+            </li>
+            <li>
+              <i></i>
+              <p>话费</p>
+            </li>
+            <li>
+              <i></i>
+              <p>话费</p>
+            </li>
+            <li>
+              <i></i>
+              <p>话费</p>
+            </li>
+            <li>
+              <i></i>
+              <p>话费</p>
+            </li>
+            <li>
+              <i></i>
+              <p>话费</p>
+            </li>
+            <li>
+              <i></i>
+              <p>话费</p>
+            </li>
+            <li>
+              <i></i>
+              <p>话费</p>
+            </li>
+          </ul>
+        </div>
+        <div class="bargain">
+          <img src="upload/beauty.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- 推荐模块 -->
+    <div class="w recom">
+      <!-- 分析布局：左右两个布局，所以需要浮动的形势 -->
+      <div class="recom_hd">
+        <i><img src="images/clock.png" alt=""></i>
+        <p><strong>今日推荐</strong></p>
+      </div>
+      <div class="recom_bd">
+        <ul>
+          <li><img src="upload/recom.jpg" alt=""></li>
+          <li><img src="upload/recom.jpg" alt=""></li>
+          <li><img src="upload/recom.jpg" alt=""></li>
+          <li><img src="upload/recom.jpg" alt=""></li>
+        </ul>
+      </div>
+    </div>
+    <!-- 推荐模块 end-->
+
+    <!-- 楼层区：楼层区注意不要给高度，因为内容是变化的 -->
+    <div class="floor">
+      <!-- 一楼家用电器 -->
+      <div class="w jiadian">
+        <div class="box_hd">
+          <h3>家用电器</h3>
+          <div class="table_list">
+            <ul>
+              <li><a href="#" class="style_red">热门</a>｜</li>
+              <li><a href="#">大家电</a>｜</li>
+              <li><a href="#">生活电器</a>｜</li>
+              <li><a href="#">厨房电器</a>｜</li>
+              <li><a href="#">个护健康</a>｜</li>
+              <li><a href="#">应季电器</a>｜</li>
+              <li><a href="#">空气净水</a>｜</li>
+              <li><a href="#">新奇特</a>｜</li>
+              <li><a href="#">高端电器</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="box_bd">
+          <div class="tab_content">
+            <div class="table_list_item1">
+              <div class="col_210">
+                <ul>
+                  <li><a href="#">节能补贴</a></li>
+                  <li><a href="#">节能补贴</a></li>
+                  <li><a href="#">节能补贴</a></li>
+                  <li><a href="#">节能补贴</a></li>
+                  <li><a href="#">节能补贴</a></li>
+                  <li><a href="#">节能补贴</a></li>
+                </ul>
+                <a href="#"><img src="upload/product4.jpg" alt=""></a>
+              </div>
+              <div class="col_329">
+                <a href="#"><img src="upload/product1.jpg" alt=""></a>
+              </div>
+              <div class="col_221">
+                <a href="#"><img class="product2" src="upload/product2.jpg" alt=""></a>
+                <div class="line"></div>
+                <a href="#"><img class="product2" src="upload/product3.jpg" alt=""></a>
+              </div>
+              <div class="col_221">
+                <a href="#"><img class="product5" src="upload/product5.jpg" alt=""></a>
+              </div>
+              <div class="col_219">
+                <a href="#"><img class="product" src="upload/beauty.jpg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 二楼手机通信 -->
+
+      <div class="w shouji">
+        <div class="box_hd">
+          <h3>手机通信</h3>
+          <div class="table_list">
+            <ul>
+              <li><a href="#" class="style_red">热门</a>｜</li>
+              <li><a href="#">大家电</a>｜</li>
+              <li><a href="#">生活电器</a>｜</li>
+              <li><a href="#">厨房电器</a>｜</li>
+              <li><a href="#">个护健康</a>｜</li>
+              <li><a href="#">应季电器</a>｜</li>
+              <li><a href="#">空气净水</a>｜</li>
+              <li><a href="#">新奇特</a>｜</li>
+              <li><a href="#">高端电器</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="box_bd">
+          <div class="tab_content">
+            <div class="table_list_item1">
+              <div class="col_210">
+                <ul>
+                  <li><a href="#">节能补贴</a></li>
+                  <li><a href="#">节能补贴</a></li>
+                  <li><a href="#">节能补贴</a></li>
+                  <li><a href="#">节能补贴</a></li>
+                  <li><a href="#">节能补贴</a></li>
+                  <li><a href="#">节能补贴</a></li>
+                </ul>
+                <a href="#"><img src="upload/product4.jpg" alt=""></a>
+              </div>
+              <div class="col_329">
+                <a href="#"><img src="upload/product1.jpg" alt=""></a>
+              </div>
+              <div class="col_221">
+                <a href="#"><img class="product2" src="upload/product2.jpg" alt=""></a>
+                <div class="line"></div>
+                <a href="#"><img class="product2" src="upload/product3.jpg" alt=""></a>
+              </div>
+              <div class="col_221">
+                <a href="#"><img class="product5" src="upload/product5.jpg" alt=""></a>
+              </div>
+              <div class="col_219">
+                <a href="#"><img class="product" src="upload/beauty.jpg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 楼层区end -->
+  </div>
+  <!-- 首页专有模块 end-->
+
+  <!-- 底部模块 -->
+  <footer class="footer">
+    <div class="w">
+      <div class="service_model">
+        <ul>
+          <li>
+            <h5 class="genuious"></h5>
+            <div class="service_text">
+              <h4>Genuious Products</h4>
+              <p>Genuious, and velenty</p>
+            </div>
+          </li>
+          <li>
+            <h5 class="dilevery"></h5>
+            <div class="service_text">
+              <h4>Genuious Products</h4>
+              <p>Genuious, and velenty</p>
+            </div>
+          </li>
+          <li>
+            <h5 class="aftersell"></h5>
+            <div class="service_text">
+              <h4>Genuious Products</h4>
+              <p>Genuious, and velenty</p>
+            </div>
+          </li>
+          <li>
+            <h5 class="special"></h5>
+            <div class="service_text">
+              <h4>Genuious Products</h4>
+              <p>Genuious, and velenty</p>
+            </div>
+          </li>
+          <!-- <li>
+            <h5 class="center"></h5>
+            <div class="service_text">
+              <h4>Genuious Products</h4>
+              <p>Genuious, and velenty</p>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+      <div class="help_model">
+        <dl>
+          <dt>服务指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">生活旅行/购物</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+          <dt>服务指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">生活旅行/购物</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+          <dt>服务指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">生活旅行/购物</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+          <dt>服务指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">生活旅行/购物</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+          <dt>服务指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">生活旅行/购物</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+          <dt>帮助中心</dt>
+          <dd><img src="images/wx_cz.jpeg" alt="">品优购客户端</dd>
+        </dl>
+      </div>
+      <div class="copy_right">
+        <div class="links">
+          关于我们 | 联系我们 | 联系客服 | 商家入驻 | 营销中心 | 手机品优购 | 友情链接 | 销售联盟 | 品优购社区 | 品优购公益 | English Site | Contact U
+        </div>
+        <div class="address">
+          地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn
+          </br>京ICP备08001421号京公网安备110108007702
+        </div>
+        <!-- 关于我们 | 联系我们 | 联系客服 | 商家入驻 | 营销中心 | 手机品优购 | 友情链接 | 销售联盟 | 品优购社区 | 品优购公益 | English Site | Contact U
+
+地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn
+京ICP备08001421号京公网安备110108007702 -->
+      </div>
+    </div>
+
+  </footer>
+  <!-- 底部模块end -->
+</body>
+
+</html>

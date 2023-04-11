@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>列表页-综合网购首选-正品低价，品质保障，配送及时，轻松购物！</title>
+  <meta name="description"
+    content="京东JD.com-专业的综合网上购物商城，销售家电，数码通讯，电脑，家居百货，服装服饰，母婴，图书，食品等数万个品牌优质商品，便捷诚信的服务，为你提供愉悦的网上购物体验！" />
+  <meta name="keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!-- 引入初始化样式文件 -->
+  <link rel="stylesheet" href="css/base.css">
+  <!-- 引入我们公共的样式文件 -->
+  <link rel="stylesheet" href="css/common.css">
+  <!-- 引入list的样式文件 -->
+  <link rel="stylesheet" href="css/list.css">
+</head>
+
+<body>
+  <!-- 快捷导航 -->
+  <section class="shortcut">
+    <!-- 放置版心 -->
+    <div class="w">
+      <div class="fl">
+        <ul>
+          <li>Welcome:&nbsp;&nbsp;</li>
+          <li><a href="#">Sign in</a>&nbsp;&nbsp;&nbsp;<a href="#" class="style_red ">Sign up</a></li>
+        </ul>
+      </div>
+      <div class="fr">
+        <ul>
+          <li>My order</li>
+          <li></li>
+          <li class="arrow-icon">My shopping</li>
+          <li></li>
+          <li>Member</li>
+          <li></li>
+          <li>Enterprise</li>
+          <li></li>
+          <li class="arrow-icon">Follow us</li>
+          <li></li>
+          <li class="arrow-icon">Server</li>
+          <li></li>
+          <li class="arrow-icon">Navigation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- 头部模块制作开始 我这里犯了一个错误，把头部模块放到了快捷导航模块了-->
+  <header class="header w">
+    <!-- 这是SEO的logo -->
+    <!-- 1、重要：实际开发中logo制作，一定要放一个h1标签，目的就是为了增加搜索权重 -->
+    <!-- 2、h1里面要放一个链接，返回首页
+    3、为了搜索引擎收录我们，我们链接里面要放一个文字（网站名称），但是文字不要显示出来
+        方法1:text-indent, 把文字移到盒子外面，然后隐藏overflow:hidden,淘宝的做法
+        方法2:直接font-size:0,京东的做法。
+    4、最好给链接一个title属性，这样书包移到logo就可以看到上面的提示文字了。 -->
+
+    <div class="logo">
+      <!-- 按照上面的规则，先放一个h1标签，然后在放一个链接 -->
+      <h1>
+        <a href="index.html" title="Shopping">Shopping</a>
+      </h1>
+    </div>
+    <!-- 搜索模块开始 -->
+    <div class="search">
+      <input type="search" name="" id="" placeholder="Please input your words" autofocus="autofocus">
+      <button>Search</button>
+    </div>
+    <!-- 搜索模块结束 -->
+    <!-- 热词模块 视频是要去用a元素做-->
+    <div class="hotwords">
+      <a href="#" class="style_red">优惠购首发</a>
+      <a href="#">亿元优惠</a>
+      <a href="#">9.9元团购</a>
+      <a href="#">美满99减30</a>
+      <a href="#">办公用品</a>
+      <a href="#">电脑</a>
+      <a href="#">通信</a>
+      <!-- <a href="#"></a> -->
+    </div>
+    <!-- 热词模块end -->
+    <!-- 购物车模块 -->
+    <div class="shopcar">我的购物车
+      <!-- 计数模块 -->
+      <!-- 这里得用绝对定位，不然就会改变上面文字的位置 -->
+      <i class="count">88888</i>
+      <!-- 计数模块end -->
+    </div>
+    <!-- 购物车模块结束 -->
+    <!-- 计数模块 -->
+  </header>
+  <!-- 头部模块制作结束 -->
+
+  <!-- 导航栏制作 -->
+  <!-- 思路分析： -->
+  <!-- 先给一个通栏的大盒子，显示一条线；然后再有一个版心的盒子，里面放两个盒子左右浮动 -->
+  <nav class="nav">
+    <div class="w">
+      <!-- 主要这种下拉式的盒子 -->
+      <div class="dropdown">
+        <div class="dt">全部商品分类</div>
+        <div class="dd">
+          <ul>
+            <li><a href="#">家用电器</a></li>
+            <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+            <li><a href="#">电脑、办公</a></li>
+            <li><a href="#">男装、女装、童装、内衣</a></li>
+            <li><a href="#">护肤化妆、清洁用品、宠物</a></li>
+            <li><a href="#">鞋靴、箱包、珠宝、奢侈品</a></li>
+            <li><a href="#">运动户外、钟表</a></li>
+            <li><a href="#">汽车、汽车用品</a></li>
+            <li><a href="#">母婴、玩具乐器</a></li>
+            <li><a href="#">食品、酒类、生鲜、特产</a></li>
+            <li><a href="#">医药保健</a></li>
+            <li><a href="#">图书、音像、电子书</a></li>
+            <li><a href="#">彩票、旅行、充值、票务</a></li>
+            <li><a href="#">理财、众筹、白条、保险</a></li>
+            <li><a href="#">家居、家具、家装、厨具</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- 导航链接 -->
+
+      <div class="navitems">
+        <ul>
+          <li><a href="#">服装城</a></li>
+          <li><a href="#">美容馆</a></li>
+          <li><a href="#">智能超市</a></li>
+          <li><a href="#">全球购</a></li>
+          <li><a href="#">闪购</a></li>
+          <li><a href="#">团购</a></li>
+          <li><a href="#">拍卖</a></li>
+          <li><a href="#">石油</a></li>
+        </ul>
+      </div>
+
+      <!-- 导航链接end -->
+    </div>
+  </nav>
+  <!-- 导航栏制作end -->
+
+  <!-- 底部模块 -->
+  <footer class="footer">
+    <div class="w">
+      <div class="service_model">
+        <ul>
+          <li>
+            <h5 class="genuious"></h5>
+            <div class="service_text">
+              <h4>Genuious Products</h4>
+              <p>Genuious, and velenty</p>
+            </div>
+          </li>
+          <li>
+            <h5 class="dilevery"></h5>
+            <div class="service_text">
+              <h4>Genuious Products</h4>
+              <p>Genuious, and velenty</p>
+            </div>
+          </li>
+          <li>
+            <h5 class="aftersell"></h5>
+            <div class="service_text">
+              <h4>Genuious Products</h4>
+              <p>Genuious, and velenty</p>
+            </div>
+          </li>
+          <li>
+            <h5 class="special"></h5>
+            <div class="service_text">
+              <h4>Genuious Products</h4>
+              <p>Genuious, and velenty</p>
+            </div>
+          </li>
+          <!-- <li>
+              <h5 class="center"></h5>
+              <div class="service_text">
+                <h4>Genuious Products</h4>
+                <p>Genuious, and velenty</p>
+              </div>
+            </li> -->
+        </ul>
+      </div>
+      <div class="help_model">
+        <dl>
+          <dt>服务指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">生活旅行/购物</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+          <dt>服务指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">生活旅行/购物</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+          <dt>服务指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">生活旅行/购物</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+          <dt>服务指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">生活旅行/购物</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+          <dt>服务指南</dt>
+          <dd><a href="#">购物流程</a></dd>
+          <dd><a href="#">生活旅行/购物</a></dd>
+          <dd><a href="#">常见问题</a></dd>
+          <dd><a href="#">大家电</a></dd>
+          <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+          <dt>帮助中心</dt>
+          <dd><img src="images/wx_cz.jpeg" alt="">品优购客户端</dd>
+        </dl>
+      </div>
+      <div class="copy_right">
+        <div class="links">
+          关于我们 | 联系我们 | 联系客服 | 商家入驻 | 营销中心 | 手机品优购 | 友情链接 | 销售联盟 | 品优购社区 | 品优购公益 | English Site | Contact U
+        </div>
+        <div class="address">
+          地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn
+          </br>京ICP备08001421号京公网安备110108007702
+        </div>
+        <!-- 关于我们 | 联系我们 | 联系客服 | 商家入驻 | 营销中心 | 手机品优购 | 友情链接 | 销售联盟 | 品优购社区 | 品优购公益 | English Site | Contact U
+  
+  地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn
+  京ICP备08001421号京公网安备110108007702 -->
+      </div>
+    </div>
+
+  </footer>
+  <!-- 底部模块end -->
+</body>
+
+</html>
